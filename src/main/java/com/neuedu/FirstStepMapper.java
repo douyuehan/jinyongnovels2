@@ -67,7 +67,7 @@ public class FirstStepMapper extends Mapper<LongWritable,Text,LongWritable,Text>
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
-        line = line.replace("道","");
+
 
         Result result = DicAnalysis.parse(line);
         List<Term> termList=result.getTerms();

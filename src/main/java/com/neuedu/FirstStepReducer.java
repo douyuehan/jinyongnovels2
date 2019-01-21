@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class FirstStepReducer extends Reducer<LongWritable,Text,Text,NullWritable>
 {
-//list()
+
     @Override
     protected void reduce(LongWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Text strNameLine = values.iterator().next();
